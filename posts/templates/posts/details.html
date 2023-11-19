@@ -2,12 +2,12 @@
 
 {% block content %}
 
-<h1>Szczegóły wpisu</h1>
+    <h1>Szczegóły wpisu</h1>
 
-<p><b>Tytuł:</b><br> {{ details.title }}</p>
-<p><b>Data i godzina utworzenia:</b><br> {{ details.created_at | date:"Y-m-d G:m" }}</p>
-<p><b>Data i godzina edycji:</b><br> {{ details.updated_at | date:"Y-m-d G:m" }}</p>
-<p><b>Treść:</b><br> {{ details.content|linebreaksbr }}</p>
+    <p><b>Tytuł:</b><br> {{ details.title }}</p>
+    <p><b>Data i godzina utworzenia:</b><br> {{ details.created_at | date:"Y-m-d G:m" }}</p>
+    <p><b>Data i godzina edycji:</b><br> {{ details.updated_at | date:"Y-m-d G:m" }}</p>
+    <p><b>Treść:</b><br> {{ details.content|linebreaksbr }}</p>
 
 
-{% endblock%}
+{% endblock %}

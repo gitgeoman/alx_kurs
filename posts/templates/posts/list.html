@@ -1,19 +1,19 @@
 {% extends 'posts/base.html' %}
 
 {% block content %}
-<h1>Wszystkie wpisy</h1>
+    <h1>Wszystkie wpisy</h1>
 
 
-{% for el in posts_list %}
-<p class="title">{{ el.title }}
+    {% for el in posts_list %}
+        <p class="title">{{ el.title }}
 
-</p>
-<p class="data"><i>(utworzono: {{ el.created_at | date:"Y-m-d G:m" }})</i></p>
-<p>{{ el.content|linebreaksbr|truncatewords:30 }}</p>
-<p class="links">
-    <a href="{% url 'details' id=el.pk %}">Szczegóły</a>
-</p>
-{% endfor %}
+        </p>
+        <p class="data"><i>(utworzono: {{ el.created_at | date:"Y-m-d G:m" }})</i></p>
+        <p>{{ el.content|linebreaksbr|truncatewords:30 }}</p>
+        <p class="links">
+            <a href="{% url 'details' id=el.pk %}">Szczegóły</a>
+        </p>
+    {% endfor %}
 
 
-{% endblock%}
+{% endblock %}
